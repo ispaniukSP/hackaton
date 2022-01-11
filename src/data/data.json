@@ -1,0 +1,425 @@
+[
+  {
+    "text_generated_by_step_name": "input",
+    "text_generated_by_step_id": 0,
+    "text": "One month after the United States began what has become a troubled rollout of a national COVID vaccination campaign, the effort is finally gathering real steam.\nClose to a million doses -- over 951,000, to be more exact -- made their way into the arms of Americans in the past 24 hours, the U.S. Centers for Disease Control and Prevention reported Wednesday. That's the largest number of shots given in one day since the rollout began and a big jump from the previous day, when just under 340,000 doses were given, CBS News reported.\nThat number is likely to jump quickly after the federal government on Tuesday gave states the OK to vaccinate anyone over 65 and said it would release all the doses of vaccine it has available for distribution. Meanwhile, a number of states have now opened mass vaccination sites in an effort to get larger numbers of people inoculated, CBS News reported.",
+    "labels": [
+      {
+        "type": "keyword",
+        "name": null,
+        "span": [280, 285],
+        "value": "hours",
+        "output_spans": [{ "section": 0, "start": 280, "end": 285 }],
+        "span_text": "hours"
+      },
+      {
+        "type": "keyword",
+        "name": null,
+        "span": [617, 623],
+        "value": "states",
+        "output_spans": [{ "section": 0, "start": 617, "end": 623 }],
+        "span_text": "states"
+      },
+      {
+        "type": "keyword",
+        "name": null,
+        "span": [768, 774],
+        "value": "states",
+        "output_spans": [{ "section": 0, "start": 768, "end": 774 }],
+        "span_text": "states"
+      },
+      {
+        "type": "keyword",
+        "name": null,
+        "span": [121, 127],
+        "value": "effort",
+        "output_spans": [{ "section": 0, "start": 121, "end": 127 }],
+        "span_text": "effort"
+      },
+      {
+        "type": "keyword",
+        "name": null,
+        "span": [820, 826],
+        "value": "effort",
+        "output_spans": [{ "section": 0, "start": 820, "end": 826 }],
+        "span_text": "effort"
+      },
+      {
+        "type": "keyword",
+        "name": null,
+        "span": [717, 726],
+        "value": "available",
+        "output_spans": [{ "section": 0, "start": 717, "end": 726 }],
+        "span_text": "available"
+      },
+      {
+        "type": "keyword",
+        "name": null,
+        "span": [149, 159],
+        "value": "real steam",
+        "output_spans": [{ "section": 0, "start": 149, "end": 159 }],
+        "span_text": "real steam"
+      },
+      {
+        "type": "keyword",
+        "name": null,
+        "span": [378, 384],
+        "value": "number",
+        "output_spans": [{ "section": 0, "start": 378, "end": 384 }],
+        "span_text": "number"
+      },
+      {
+        "type": "keyword",
+        "name": null,
+        "span": [539, 545],
+        "value": "number",
+        "output_spans": [{ "section": 0, "start": 539, "end": 545 }],
+        "span_text": "number"
+      },
+      {
+        "type": "keyword",
+        "name": null,
+        "span": [758, 764],
+        "value": "number",
+        "output_spans": [{ "section": 0, "start": 758, "end": 764 }],
+        "span_text": "number"
+      },
+      {
+        "type": "keyword",
+        "name": null,
+        "span": [841, 847],
+        "value": "number",
+        "output_spans": [{ "section": 0, "start": 841, "end": 847 }],
+        "span_text": "number"
+      },
+      {
+        "type": "keyword",
+        "name": null,
+        "span": [247, 251],
+        "value": "arms",
+        "output_spans": [{ "section": 0, "start": 247, "end": 251 }],
+        "span_text": "arms"
+      },
+      {
+        "type": "keyword",
+        "name": null,
+        "span": [354, 357],
+        "value": "day",
+        "output_spans": [{ "section": 0, "start": 354, "end": 357 }],
+        "span_text": "day"
+      },
+      {
+        "type": "keyword",
+        "name": null,
+        "span": [407, 410],
+        "value": "day",
+        "output_spans": [{ "section": 0, "start": 407, "end": 410 }],
+        "span_text": "day"
+      },
+      {
+        "type": "keyword",
+        "name": null,
+        "span": [468, 471],
+        "value": "day",
+        "output_spans": [{ "section": 0, "start": 468, "end": 471 }],
+        "span_text": "day"
+      },
+      {
+        "type": "keyword",
+        "name": null,
+        "span": [608, 611],
+        "value": "day",
+        "output_spans": [{ "section": 0, "start": 608, "end": 611 }],
+        "span_text": "day"
+      },
+      {
+        "type": "keyword",
+        "name": null,
+        "span": [731, 743],
+        "value": "distribution",
+        "output_spans": [{ "section": 0, "start": 731, "end": 743 }],
+        "span_text": "distribution"
+      },
+      {
+        "type": "keyword",
+        "name": null,
+        "span": [549, 555],
+        "value": "likely",
+        "output_spans": [{ "section": 0, "start": 549, "end": 555 }],
+        "span_text": "likely"
+      },
+      {
+        "type": "keyword",
+        "name": null,
+        "span": [441, 449],
+        "value": "big jump",
+        "output_spans": [{ "section": 0, "start": 441, "end": 449 }],
+        "span_text": "big jump"
+      },
+      {
+        "type": "keyword",
+        "name": null,
+        "span": [388, 393],
+        "value": "shots",
+        "output_spans": [{ "section": 0, "start": 388, "end": 393 }],
+        "span_text": "shots"
+      },
+      {
+        "type": "keyword",
+        "name": null,
+        "span": [852, 858],
+        "value": "people",
+        "output_spans": [{ "section": 0, "start": 852, "end": 858 }],
+        "span_text": "people"
+      },
+      {
+        "type": "keyword",
+        "name": null,
+        "span": [272, 276],
+        "value": "past",
+        "output_spans": [{ "section": 0, "start": 272, "end": 276 }],
+        "span_text": "past"
+      },
+      {
+        "type": "keyword",
+        "name": null,
+        "span": [702, 709],
+        "value": "vaccine",
+        "output_spans": [{ "section": 0, "start": 702, "end": 709 }],
+        "span_text": "vaccine"
+      },
+      {
+        "type": "keyword",
+        "name": null,
+        "span": [234, 237],
+        "value": "way",
+        "output_spans": [{ "section": 0, "start": 234, "end": 237 }],
+        "span_text": "way"
+      },
+      {
+        "type": "keyword",
+        "name": null,
+        "span": [582, 600],
+        "value": "federal government",
+        "output_spans": [{ "section": 0, "start": 582, "end": 600 }],
+        "span_text": "federal government"
+      },
+      {
+        "type": "keyword",
+        "name": null,
+        "span": [180, 185],
+        "value": "doses",
+        "output_spans": [{ "section": 0, "start": 180, "end": 185 }],
+        "span_text": "doses"
+      },
+      {
+        "type": "keyword",
+        "name": null,
+        "span": [497, 502],
+        "value": "doses",
+        "output_spans": [{ "section": 0, "start": 497, "end": 502 }],
+        "span_text": "doses"
+      },
+      {
+        "type": "keyword",
+        "name": null,
+        "span": [693, 698],
+        "value": "doses",
+        "output_spans": [{ "section": 0, "start": 693, "end": 698 }],
+        "span_text": "doses"
+      },
+      {
+        "type": "keyword",
+        "name": null,
+        "span": [4, 9],
+        "value": "month",
+        "output_spans": [{ "section": 0, "start": 4, "end": 9 }],
+        "span_text": "month"
+      },
+      {
+        "type": "keyword",
+        "name": null,
+        "span": [214, 219],
+        "value": "exact",
+        "output_spans": [{ "section": 0, "start": 214, "end": 219 }],
+        "span_text": "exact"
+      },
+      {
+        "type": "keyword",
+        "name": null,
+        "span": [58, 74],
+        "value": "troubled rollout",
+        "output_spans": [{ "section": 0, "start": 58, "end": 74 }],
+        "span_text": "troubled rollout"
+      },
+      {
+        "type": "sentence",
+        "name": null,
+        "span": [411, 443],
+        "value": "Is there any other help from me?",
+        "output_spans": [{ "section": 11, "start": 0, "end": 32 }],
+        "input_spans": null,
+        "span_text": "Is there any other help from me?"
+      },
+      {
+        "type": "sentence",
+        "name": null,
+        "span": [450, 544],
+        "value": "I am in a group of 1 and need a pool ride to 4204 Lone Tree Way, can you look for a cab there?",
+        "output_spans": [{ "section": 12, "start": 0, "end": 94 }],
+        "input_spans": null,
+        "span_text": "I am in a group of 1 and need a pool ride to 4204 Lone Tree Way, can you look for a cab there?"
+      },
+      {
+        "type": "sentence",
+        "name": null,
+        "span": [553, 652],
+        "value": "Please give confirmation details: You need a pool ride to 4204 Lone Tree Way and seat required is 1",
+        "output_spans": [{ "section": 13, "start": 0, "end": 99 }],
+        "input_spans": null,
+        "span_text": "Please give confirmation details: You need a pool ride to 4204 Lone Tree Way and seat required is 1"
+      },
+      {
+        "type": "sentence",
+        "name": null,
+        "span": [659, 703],
+        "value": "That is perfect and what is the ticket cost?",
+        "output_spans": [{ "section": 14, "start": 0, "end": 44 }],
+        "input_spans": null,
+        "span_text": "That is perfect and what is the ticket cost?"
+      },
+      {
+        "type": "sentence",
+        "name": null,
+        "span": [712, 734],
+        "value": "The ride costs $14.85.",
+        "output_spans": [{ "section": 15, "start": 0, "end": 22 }],
+        "input_spans": null,
+        "span_text": "The ride costs $14.85."
+      },
+      {
+        "type": "sentence",
+        "name": null,
+        "span": [735, 776],
+        "value": "Your ride is booked and cab is on the way",
+        "output_spans": [{ "section": 15, "start": 23, "end": 64 }],
+        "input_spans": null,
+        "span_text": "Your ride is booked and cab is on the way"
+      },
+      {
+        "type": "sentence",
+        "name": null,
+        "span": [783, 814],
+        "value": "How much it takes to come here?",
+        "output_spans": [{ "section": 16, "start": 0, "end": 31 }],
+        "input_spans": null,
+        "span_text": "How much it takes to come here?"
+      },
+      {
+        "type": "sentence",
+        "name": null,
+        "span": [823, 853],
+        "value": "Cab will be there in 6 minutes",
+        "output_spans": [{ "section": 17, "start": 0, "end": 30 }],
+        "input_spans": null,
+        "span_text": "Cab will be there in 6 minutes"
+      },
+      {
+        "type": "sentence",
+        "name": null,
+        "span": [860, 879],
+        "value": "Thank you very much",
+        "output_spans": [{ "section": 18, "start": 0, "end": 19 }],
+        "input_spans": null,
+        "span_text": "Thank you very much"
+      },
+      {
+        "type": "sentence",
+        "name": null,
+        "span": [888, 904],
+        "value": "Have a great day",
+        "output_spans": [{ "section": 19, "start": 0, "end": 16 }],
+        "input_spans": null,
+        "span_text": "Have a great day"
+      },
+      {
+        "type": "topic",
+        "name": null,
+        "span": null,
+        "value": "Vaccination",
+        "output_spans": [],
+        "span_text": null
+      },
+      {
+        "type": "topic",
+        "name": null,
+        "span": null,
+        "value": "News",
+        "output_spans": [],
+        "span_text": null
+      },
+      {
+        "type": "topic",
+        "name": null,
+        "span": null,
+        "value": "CBS News",
+        "output_spans": [],
+        "span_text": null
+      },
+      {
+        "type": "highlight",
+        "name": null,
+        "span": [46, 70],
+        "value": "This is Almer with Acme.",
+        "output_spans": [{ "section": 1, "start": 11, "end": 35 }],
+        "input_spans": null,
+        "span_text": "This is Almer with Acme."
+      },
+      {
+        "type": "highlight",
+        "name": null,
+        "span": [166, 176],
+        "value": "From Acme.",
+        "output_spans": [{ "section": 3, "start": 0, "end": 10 }],
+        "input_spans": null,
+        "span_text": "From Acme."
+      },
+      {
+        "type": "highlight",
+        "name": null,
+        "span": [177, 225],
+        "value": "We're a carrot platform I just was following up.",
+        "output_spans": [{ "section": 3, "start": 11, "end": 59 }],
+        "input_spans": null,
+        "span_text": "We're a carrot platform I just was following up."
+      },
+      {
+        "type": "highlight",
+        "name": null,
+        "span": [410, 610],
+        "value": "Yeah, no problem at all I just wanted to call to see, you know, if this is something that you're interested in, we could set up like, you know, 10 minutes for me to answer any questions that you have.",
+        "output_spans": [{ "section": 7, "start": 0, "end": 200 }],
+        "input_spans": null,
+        "span_text": "Yeah, no problem at all I just wanted to call to see, you know, if this is something that you're interested in, we could set up like, you know, 10 minutes for me to answer any questions that you have."
+      },
+      {
+        "type": "highlight",
+        "name": null,
+        "span": [842, 937],
+        "value": "Actually, it sounded interesting to me, because we are also working on carrot soup itself here.",
+        "output_spans": [{ "section": 8, "start": 44, "end": 139 }],
+        "input_spans": null,
+        "span_text": "Actually, it sounded interesting to me, because we are also working on carrot soup itself here."
+      },
+      {
+        "type": "highlight",
+        "name": null,
+        "span": [1027, 1278],
+        "value": "I know, I mean, carrot soup, just as people become more data mature, you know, it becomes so important for, for companies to understand, you know, volcano behavior of their lands, and being able to eat when there are carrots and things of that nature.",
+        "output_spans": [{ "section": 9, "start": 76, "end": 327 }],
+        "input_spans": null,
+        "span_text": "I know, I mean, carrot soup, just as people become more data mature, you know, it becomes so important for, for companies to understand, you know, volcano behavior of their lands, and being able to eat when there are carrots and things of that nature."
+      }
+    ]
+  }
+]
