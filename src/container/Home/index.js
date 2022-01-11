@@ -30,9 +30,7 @@ export default function Home() {
     return (     
             tree.loader ? null : (
             <Styled.HomeContainer>
-                <div>
-                    <AppTree options={tree.treeLabels} />
-                </div>
+                <AppTree options={tree.treeLabels} />
                 <AppSelect config={tree.treeTypes} chooseType={setCurrentType}/>
                 <AppButton onClick={() => findCount()}>
                     Run
