@@ -13,22 +13,33 @@ const treeFailure = (error) => ({
     error: error
 })
 
-export const getTypesValues = (getType) => async dispatch => {
+export const getAnalyticsForm = () => async dispatch => {
     try{
         dispatch(treeRequest())
-        const keywordsArr = data[0].labels.filter((label) => label.type === getType)
-            const wordsArr = [];
-            keywordsArr.map((label) => wordsArr.push(label.value))
-            const getUniqueWords = new Set([...wordsArr])   
-            const result = [...new Set(
-                Array.from(getUniqueWords).map((word) => {
-                    const resultValue = keywordsArr.filter((label) => label.value === word).length
-                    return{
+        const labelTypes = [
+            ...new Set(data[0].labels.map((label) => label.type))
+        ]
+        const result = labelTypes.map((label) => ({
+                id: label,
+                name: label
+        }))
+        for(let i=0; i < labelTypes.length; i++){
+            const uniqueLabels = data[0].labels.filter((label) => label.type === labelTypes[i])
+            const getUniqueWords = [
+                ...new Set(
+                    uniqueLabels.map((label) => label.value)
+                )
+            ]
+            getUniqueWords.map((word) => {
+                const resultValue = uniqueLabels.filter((label) => label.value === word).length
+                result.push({
                         name: word, 
                         value: resultValue,
-                    }
-                })
-            )];
+                        parent: labelTypes[i],
+                        colorValue: resultValue,
+                    })
+            })
+        }
         dispatch(treeSuccess(result));
     }catch(err){
         dispatch(treeFailure(err))
@@ -50,7 +61,7 @@ const getTypeFailure = (error) => ({
 export const getTypes = () => async dispatch => {
     try{
         dispatch(getTypeRequest())
-        const getTypes = [...new Set(data[0].labels.map((label) => label.type))]  
+        
         dispatch(getTypeSuccess(getTypes))  
     }catch(err){
         dispatch(getTypeFailure(err))
