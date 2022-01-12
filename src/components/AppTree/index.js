@@ -1,13 +1,51 @@
-import React from 'react'
-import Highcharts, { format } from 'highcharts'
+import React, { useEffect, useState} from 'react'
+import Highcharts from 'highcharts'
 import HighchartsTreeMap from 'highcharts/modules/treemap'
+import HighchartsColorAxis from 'highcharts/modules/heatmap.js'
 import ReactHighcharts from "highcharts-react-official";
+import data from '../../data/data.json'
 
-export default function AppTree(props) {
-    const {options} = props;
+export default function AppTree() {
+    const [result, setResult] = useState([])
     HighchartsTreeMap(Highcharts)
-    
-    const configg = {
+    HighchartsColorAxis(Highcharts)
+
+    useEffect(()=> {
+        const labelTypes = [
+            ...new Set(data[0].labels.map((label) => label.type))
+        ]
+        const resultTable = labelTypes.map((label) => ({
+                id: label,
+                name: label
+        }))
+        for(let i=0; i < labelTypes.length; i++){
+            const uniqueLabels = data[0].labels.filter((label) => label.type === labelTypes[i])
+            const getUniqueWords = [
+                ...new Set(
+                    uniqueLabels.map((label) => label.value)
+                )
+            ]
+            getUniqueWords.map((word) => {
+                const resultValue = uniqueLabels.filter((label) => label.value === word).length
+                resultTable.push({
+                        name: word, 
+                        value: resultValue,
+                        parent: labelTypes[i],
+                        colorValue: resultValue,
+                    })
+            })
+        }
+        setResult(resultTable)
+    }, [])
+
+    const treeConfig = {
+        colorAxis: {
+            minColor: '#c6c6ea',
+            maxColor: '#4D4DFF',
+        },
+        legend: {
+            enabled: false
+           },
         series: [{
             type: 'treemap',
             stackLabels: {
@@ -18,17 +56,49 @@ export default function AppTree(props) {
                 y: -275
             },
             layoutAlgorithm: 'squarified',
+            allowDrillToNode: true,
             animationLimit: 1000,
-            data: options            
+            alternateStartingDirection: true,
+            dataLabels: {
+                enabled: false
+            },
+            levels: [{
+                level: 1,
+                dataLabels: {
+                    enabled: true,
+                    verticalAlign: 'middle',
+                    allowOverlap: true,
+                    crop: false,
+                    style: {
+                        fontSize: '12px',
+                        textAlign: "center",
+                        color: "#fff",
+                    },
+                    format:'{point.name}</br><b>{point.value}</b>'
+                },
+                borderWidth: 3,
+                levelIsConstant: false
+            }, {
+                level: 1,
+                dataLabels: {
+                    style: {
+                        fontSize: '14px',
+                        textAlign: "center",
+                        color: "#fff",
+                    },
+                    format:'{point.name}:</br>{point.value}',
+                }
+            }],
+            data: result            
         }],
-        title: {
-            text: 'Highcharts Treemap'
-        }
+        title:{
+            text: null
+            }
     };
 
 
     return (
-        <ReactHighcharts highcharts={Highcharts} options={configg}>
+        <ReactHighcharts highcharts={Highcharts} options={treeConfig}>
         
         </ReactHighcharts>  
     )

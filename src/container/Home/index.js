@@ -3,38 +3,34 @@ import { useDispatch, useSelector } from 'react-redux'
 import AppTree from '../../components/AppTree'
 import AppButton from '../../components/Button'
 import AppSelect from '../../components/Select'
-import { getTypes, getTypesValues } from '../../store/actions/tree/tree.actions'
+// import { getTypes, getTypesValues } from '../../store/actions/tree/tree.actions'
 import * as Styled from './style'
 
 export default function Home() {
     const [currentType, setCurrentType] = useState('')
     const dispatch = useDispatch()
     const tree = useSelector(state => state.tree)
-    useEffect(() => {
-        if(!tree.treeTypes){
-            dispatch(getTypes())
-            setCurrentType()
-        }
-    }, [tree.treeTypes])
+    // useEffect(() => {
+    //     if(!tree.treeTypes){
+    //         dispatch(getTypes())
+    //         setCurrentType()
+    //     }
+    // }, [tree.treeTypes])
 
-    useEffect(() => {
-        if(!tree.treeLabels && tree.treeTypes){
-            dispatch(getTypesValues(tree?.treeTypes[0]))
-        }
-    }, [tree.treeLabels, tree.treeTypes])
+    // useEffect(() => {
+    //     if(!tree.treeLabels && tree.treeTypes){
+    //         dispatch(getTypesValues(tree?.treeTypes[0]))
+    //     }
+    // }, [tree.treeLabels, tree.treeTypes])
 
-    const findCount = () => {
-        dispatch(getTypesValues(currentType))
-    }
+    // const findCount = () => {
+    //     dispatch(getTypesValues(currentType))
+    // }
  
     return (     
             tree.loader ? null : (
             <Styled.HomeContainer>
-                <AppTree options={tree.treeLabels} />
-                <AppSelect config={tree.treeTypes} chooseType={setCurrentType}/>
-                <AppButton onClick={() => findCount()}>
-                    Run
-                </AppButton>
+                <AppTree />
             </Styled.HomeContainer>)
     )
 }
