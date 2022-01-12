@@ -393,7 +393,7 @@
 	   {
         "type": "cluster",
         "name": "topic",
-        "value": "{count:7,elements:[{count:4,text:\"Hello this is Topic\"},{count:3,text:\"Hi this is Topic\"}]}",
+        "value": "{count:7,elements:[{count:4,text:\"Hello this is Topic\"},{count:3,text:\"Hi this is \"}]}",
         "span_text": "Hello this is Almer"
       }
     ]

@@ -19,30 +19,30 @@ export default function AppTree() {
             const getUniqueNames = [...new Set(
                 clusterLabels.map((label) => label.name)
             )]
-            const resultTable = [
-                {
-                    id: "cluster",
-                    name: "cluster"
-                }
-            ]
-            for(let i=0; i < getUniqueNames.length; i++){
-                const typeIndex = clusterLabels.findIndex((item) => item.name === getUniqueNames[i]);
-                const getValue = eval(`[${clusterLabels[typeIndex].value}]`);
+            const resultTable = [];
+            getUniqueNames.map((item) => resultTable.push({
+                id: item,
+                name: item,
+            }))
+            console.log(clusterLabels)
+            for(let i=0; i < clusterLabels.length; i++){
+                const getValue = eval(`[${clusterLabels[i].value}]`);
+                const getSpanText = clusterLabels[i];
                 resultTable.push({
-                    id: clusterLabels[typeIndex].name,
-                    name: clusterLabels[typeIndex].name,
-                    value: getValue[0].count,
-                    colorValue: getValue[0].count,
-                    parent: "cluster"
+                    id: getSpanText.span_text,
+                    name: getSpanText.span_text,
+                    value: getValue[0].elements.length,
+                    colorValue: getValue[0].elements.length,
+                    parent: clusterLabels[i].name
                 })
-                const getElements = getValue[0].elements 
-                getElements.map((el) => resultTable.push({
-                    parent: clusterLabels[typeIndex].name,
-                    name: el.text,
-                    value: el.count,
-                    colorValue: el.count
-                }))
-                console.log(resultTable)
+                getValue[0].elements.map((item) => 
+                    resultTable.push({
+                        name: item.text,
+                        value: item.count,
+                        colorValue: item.count,
+                        parent: getSpanText.span_text,
+                    })
+                )
             }
             
             setResult(resultTable)
