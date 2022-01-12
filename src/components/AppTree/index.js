@@ -1,16 +1,16 @@
-import React, {useState, useEffect} from 'react'
-import Highcharts, { format } from 'highcharts'
+import React, { useEffect} from 'react'
+import Highcharts from 'highcharts'
 import HighchartsTreeMap from 'highcharts/modules/treemap'
 import HighchartsColorAxis from 'highcharts/modules/heatmap.js'
 import ReactHighcharts from "highcharts-react-official";
 import { useDispatch, useSelector } from 'react-redux';
 import { getAnalyticsForm } from '../../store/actions/tree/tree.actions';
 
-export default function AppTree(props) {
+export default function AppTree() {
     HighchartsTreeMap(Highcharts)
     HighchartsColorAxis(Highcharts)
 
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
     const tree = useSelector(state => state.tree)
 
     useEffect(() => {
@@ -33,7 +33,6 @@ export default function AppTree(props) {
             allowDrillToNode: true,
             animationLimit: 1000,
             alternateStartingDirection: true,
-            align: 'center',
             dataLabels: {
                 enabled: false
             },
@@ -41,19 +40,27 @@ export default function AppTree(props) {
                 level: 1,
                 dataLabels: {
                     enabled: true,
+                    verticalAlign: 'middle',
+                    allowOverlap: true,
+                    crop: false,
+                    style: {
+                        fontSize: '12px',
+                        textAlign: "center",
+                        color: "#fff",
+                    },
                     format:'{point.name}</br><b>{point.value}</b>'
                 },
                 borderWidth: 3,
                 levelIsConstant: false
             }, {
                 level: 1,
-                width: 50,
                 dataLabels: {
                     style: {
                         fontSize: '14px',
-                        textAlign: "center"
+                        textAlign: "center",
+                        color: "#fff",
                     },
-                    format:'{point.name}</br><b>{point.value}</b>',
+                    format:'{point.name}:</br>{point.value}',
                 }
             }],
             data: tree?.treeLabels            
