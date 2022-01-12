@@ -10,6 +10,13 @@ export default function AppTree(props) {
     const configg = {
         series: [{
             type: 'treemap',
+            stackLabels: {
+                enabled: true,
+                verticalAlign: 'bottom',
+                crop: false,
+                overflow: 'none',
+                y: -275
+            },
             layoutAlgorithm: 'squarified',
             animationLimit: 1000,
             data: options            

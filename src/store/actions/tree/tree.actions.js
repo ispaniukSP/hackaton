@@ -17,18 +17,15 @@ export const getTypesValues = (getType) => async dispatch => {
     try{
         dispatch(treeRequest())
         const keywordsArr = data[0].labels.filter((label) => label.type === getType)
-            const wordsArr = [];
-            keywordsArr.map((label) => wordsArr.push(label.value))
+            const wordsArr = keywordsArr.map((label) => label.value);
             const getUniqueWords = new Set([...wordsArr])   
-            const result = [...new Set(
-                Array.from(getUniqueWords).map((word) => {
+            const result = Array.from(getUniqueWords).map((word) => {
                     const resultValue = keywordsArr.filter((label) => label.value === word).length
                     return{
                         name: word, 
                         value: resultValue,
                     }
                 })
-            )];
         dispatch(treeSuccess(result));
     }catch(err){
         dispatch(treeFailure(err))
