@@ -1,5 +1,4 @@
 import treeType from './tree.type'
-import data from '../../../data/data.json'
 
 const treeRequest = () => ({
     type: treeType.TREE_LABELS_VALUE_REQUEST
@@ -16,30 +15,7 @@ const treeFailure = (error) => ({
 export const getAnalyticsForm = () => async dispatch => {
     try{
         dispatch(treeRequest())
-        const labelTypes = [
-            ...new Set(data[0].labels.map((label) => label.type))
-        ]
-        const result = labelTypes.map((label) => ({
-                id: label,
-                name: label
-        }))
-        for(let i=0; i < labelTypes.length; i++){
-            const uniqueLabels = data[0].labels.filter((label) => label.type === labelTypes[i])
-            const getUniqueWords = [
-                ...new Set(
-                    uniqueLabels.map((label) => label.value)
-                )
-            ]
-            getUniqueWords.map((word) => {
-                const resultValue = uniqueLabels.filter((label) => label.value === word).length
-                result.push({
-                        name: word, 
-                        value: resultValue,
-                        parent: labelTypes[i],
-                        colorValue: resultValue,
-                    })
-            })
-        }
+        
         dispatch(treeSuccess(result));
     }catch(err){
         dispatch(treeFailure(err))

@@ -139,55 +139,7 @@
         "value": "distribution",
         "output_spans": [{ "section": 0, "start": 731, "end": 743 }],
         "span_text": "distribution"
-      },
-      {
-        "type": "keyword",
-        "name": null,
-        "span": [549, 555],
-        "value": "likely",
-        "output_spans": [{ "section": 0, "start": 549, "end": 555 }],
-        "span_text": "likely"
-      },
-      {
-        "type": "keyword",
-        "name": null,
-        "span": [441, 449],
-        "value": "big jump",
-        "output_spans": [{ "section": 0, "start": 441, "end": 449 }],
-        "span_text": "big jump"
-      },
-      {
-        "type": "keyword",
-        "name": null,
-        "span": [388, 393],
-        "value": "shots",
-        "output_spans": [{ "section": 0, "start": 388, "end": 393 }],
-        "span_text": "shots"
-      },
-      {
-        "type": "keyword",
-        "name": null,
-        "span": [852, 858],
-        "value": "people",
-        "output_spans": [{ "section": 0, "start": 852, "end": 858 }],
-        "span_text": "people"
-      },
-      {
-        "type": "keyword",
-        "name": null,
-        "span": [272, 276],
-        "value": "past",
-        "output_spans": [{ "section": 0, "start": 272, "end": 276 }],
-        "span_text": "past"
-      },
-      {
-        "type": "keyword",
-        "name": null,
-        "span": [702, 709],
-        "value": "vaccine",
-        "output_spans": [{ "section": 0, "start": 702, "end": 709 }],
-        "span_text": "vaccine"
-      },
+      },  
       {
         "type": "keyword",
         "name": null,
@@ -419,6 +371,30 @@
         "output_spans": [{ "section": 9, "start": 76, "end": 327 }],
         "input_spans": null,
         "span_text": "I know, I mean, carrot soup, just as people become more data mature, you know, it becomes so important for, for companies to understand, you know, volcano behavior of their lands, and being able to eat when there are carrots and things of that nature."
+      },
+      {
+        "type": "cluster",
+        "name": "highlight",
+        "value": "{count:5,elements:[{count:3,text:\"talk to agent\"},{count:2,text:\"speak to agent\"}]}",
+        "span_text": "talk to agent"
+      },
+	   {
+        "type": "cluster",
+        "name": "highlight",
+        "value": "{count:5,elements:[{count:3,text:\"Hello this is Almer\"},{count:2,text:\"Hi this is Almer\"}]}",
+        "span_text": "Hello this is Almer"
+      },
+      {
+        "type": "cluster",
+        "name": "topic",
+        "value": "{count:7,elements:[{count:3,text:\"talk to agent\"},{count:2,text:\"speak to agent\"}]}",
+        "span_text": "talk to agent"
+      },
+	   {
+        "type": "cluster",
+        "name": "topic",
+        "value": "{count:7,elements:[{count:4,text:\"Hello this is Topic\"},{count:3,text:\"Hi this is Topic\"}]}",
+        "span_text": "Hello this is Almer"
       }
     ]
   }
